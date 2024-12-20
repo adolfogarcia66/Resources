@@ -1,0 +1,378 @@
+Ejercicios básicos de entrada/salida y operaciones matemáticas
+
+public class HolaMundo {
+    public static void main(String[] args) {
+        System.out.println("Hola Mundo");
+    }
+}
+
+
+Hola Mundo: Escribe un programa que imprima "Hola Mundo" en la consola.
+
+import java.util.Scanner;
+
+public class SumaDosNumeros {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el primer número: ");
+        int num1 = sc.nextInt();
+        System.out.print("Ingresa el segundo número: ");
+        int num2 = sc.nextInt();
+        System.out.println("La suma es: " + (num1 + num2));
+    }
+}
+
+
+Suma de dos números: Solicita al usuario dos números y muestra su suma.
+
+import java.util.Scanner;
+
+public class AreaCirculo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el radio del círculo: ");
+        double radio = sc.nextDouble();
+        double area = Math.PI * Math.pow(radio, 2);
+        System.out.println("El área del círculo es: " + area);
+    }
+}
+
+
+Cálculo de área de un círculo: Pide el radio de un círculo y calcula su área (𝜋𝑟2)(πr 2 ).
+import java.util.Scanner;
+
+public class ConvertirTemperatura {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa la temperatura en Celsius: ");
+        double celsius = sc.nextDouble();
+        double fahrenheit = celsius * 9/5 + 32;
+        System.out.println("La temperatura en Fahrenheit es: " + fahrenheit);
+    }
+}
+
+Convertidor de temperatura: Convierte una temperatura de grados Celsius a Fahrenheit.
+import java.util.Scanner;
+
+public class MayorDeDosNumeros {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el primer número: ");
+        int num1 = sc.nextInt();
+        System.out.print("Ingresa el segundo número: ");
+        int num2 = sc.nextInt();
+        if (num1 > num2) {
+            System.out.println("El mayor es: " + num1);
+        } else if (num2 > num1) {
+            System.out.println("El mayor es: " + num2);
+        } else {
+            System.out.println("Ambos números son iguales.");
+        }
+    }
+}
+
+Mayor de dos números: Pide dos números al usuario e indica cuál es el mayor.
+import java.util.Scanner;
+
+public class ParImpar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa un número: ");
+        int num = sc.nextInt();
+        if (num % 2 == 0) {
+            System.out.println("El número es par.");
+        } else {
+            System.out.println("El número es impar.");
+        }
+    }
+}
+
+Estructuras condicionales y ciclos
+Número par o impar: Pide un número y determina si es par o impar.
+import java.util.Scanner;
+
+public class ParImpar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa un número: ");
+        int num = sc.nextInt();
+        if (num % 2 == 0) {
+            System.out.println("El número es par.");
+        } else {
+            System.out.println("El número es impar.");
+        }
+    }
+}
+
+Tabla de multiplicar: Genera e imprime la tabla de multiplicar para un número ingresado por el usuario.
+import java.util.Scanner;
+
+public class TablaMultiplicar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa un número: ");
+        int num = sc.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+}
+
+Números del 1 al 10: Imprime los números del 1 al 10 utilizando un bucle.
+public class NumerosUnoAlDiez {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+Suma de números del 1 al N: Calcula la suma de todos los números desde 1 hasta un número ingresado por el usuario.
+import java.util.Scanner;
+
+public class SumaUnoAN {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa un número: ");
+        int n = sc.nextInt();
+        int suma = 0;
+        for (int i = 1; i <= n; i++) {
+            suma += i;
+        }
+        System.out.println("La suma es: " + suma);
+    }
+}
+
+Factorial de un número: Solicita un número y calcula su factorial.
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa un número: ");
+        int n = sc.nextInt();
+        int factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+        System.out.println("El factorial de " + n + " es: " + factorial);
+    }
+}
+
+Trabajando con cadenas
+Reversa de una cadena: Escribe un programa que invierta una cadena ingresada por el usuario.
+import java.util.Scanner;
+
+public class ReversaCadena {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa una cadena: ");
+        String cadena = sc.nextLine();
+        String reversa = new StringBuilder(cadena).reverse().toString();
+        System.out.println("La cadena invertida es: " + reversa);
+    }
+}
+
+Cuenta de vocales: Pide una frase y cuenta cuántas vocales contiene.
+import java.util.Scanner;
+
+public class CuentaVocales {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa una frase: ");
+        String frase = sc.nextLine();
+        int contador = 0;
+        for (char c : frase.toLowerCase().toCharArray()) {
+            if ("aeiou".indexOf(c) != -1) {
+                contador++;
+            }
+        }
+        System.out.println("La frase contiene " + contador + " vocales.");
+    }
+}
+
+Palíndromo: Verifica si una palabra ingresada es un palíndromo (se lee igual en ambos sentidos).
+import java.util.Scanner;
+
+public class Palindromo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa una palabra: ");
+        String palabra = sc.nextLine();
+        String reversa = new StringBuilder(palabra).reverse().toString();
+        if (palabra.equalsIgnoreCase(reversa)) {
+            System.out.println("La palabra es un palíndromo.");
+        } else {
+            System.out.println("La palabra no es un palíndromo.");
+        }
+    }
+}
+
+Conteo de palabras: Solicita una frase y cuenta cuántas palabras contiene.
+import java.util.Scanner;
+
+public class ConteoPalabras {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa una frase: ");
+        String frase = sc.nextLine();
+        String[] palabras = frase.trim().split("\\s+");
+        System.out.println("La frase contiene " + palabras.length + " palabras.");
+    }
+}
+
+Arrays y matrices
+Mayor en un array: Crea un programa que encuentre el número más grande en un array de números enteros.
+import java.util.Scanner;
+
+public class MayorEnArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("¿Cuántos números deseas ingresar? ");
+        int n = sc.nextInt();
+        int[] numeros = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Ingresa el número " + (i + 1) + ": ");
+            numeros[i] = sc.nextInt();
+        }
+        int mayor = numeros[0];
+        for (int num : numeros) {
+            if (num > mayor) {
+                mayor = num;
+            }
+        }
+        System.out.println("El número mayor es: " + mayor);
+    }
+}
+
+Ordenar array: Escribe un programa que ordene un array de números enteros de menor a mayor.
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class OrdenarArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("¿Cuántos números deseas ingresar? ");
+        int n = sc.nextInt();
+        int[] numeros = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Ingresa el número " + (i + 1) + ": ");
+            numeros[i] = sc.nextInt();
+        }
+        Arrays.sort(numeros);
+        System.out.println("El array ordenado es: " + Arrays.toString(numeros));
+    }
+}
+
+Matriz identidad: Crea un programa que genere e imprima una matriz identidad de tamaño 𝑛×𝑛 
+import java.util.Scanner;
+
+public class MatrizIdentidad {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el tamaño de la matriz identidad: ");
+        int n = sc.nextInt();
+        int[][] matriz = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            matriz[i][i] = 1;
+        }
+        System.out.println("Matriz identidad:");
+        for (int[] fila : matriz) {
+            for (int elemento : fila) {
+                System.out.print(elemento + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Suma de dos matrices: Pide al usuario dos matrices 2×2 e imprime su suma.
+import java.util.Scanner;
+
+public class SumaMatrices {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][] matriz1 = new int[2][2];
+        int[][] matriz2 = new int[2][2];
+        int[][] suma = new int[2][2];
+        
+        System.out.println("Ingresa los valores de la primera matriz:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                matriz1[i][j] = sc.nextInt();
+            }
+        }
+        
+        System.out.println("Ingresa los valores de la segunda matriz:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                matriz2[i][j] = sc.nextInt();
+            }
+        }
+        
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                suma[i][j] = matriz1[i][j] + matriz2[i][j];
+            }
+        }
+        
+        System.out.println("La suma de las matrices es:");
+        for (int[] fila : suma) {
+            for (int elemento : fila) {
+                System.out.print(elemento + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Proyectos pequeños con lógica
+Generador de números aleatorios: Genera un número aleatorio entre 1 y 100, y pide al usuario que lo adivine.
+import java.util.Scanner;
+
+public class AdivinaNumero {
+    public static void main(String[] args) {
+        int numeroAleatorio = (int) (Math.random() * 100) + 1;
+        Scanner sc = new Scanner(System.in);
+        int intento;
+        System.out.println("¡Adivina el número entre 1 y 100!");
+        do {
+            System.out.print("Ingresa tu número: ");
+            intento = sc.nextInt();
+            if (intento < numeroAleatorio) {
+                System.out.println("Demasiado bajo.");
+            } else if (intento > numeroAleatorio) {
+                System.out.println("Demasiado alto.");
+            } else {
+                System.out.println("¡Correcto! El número era " + numeroAleatorio);
+            }
+        } while (intento != numeroAleatorio);
+    }
+}
+
+Juego de piedra, papel o tijera: Implementa un juego simple donde el usuario compite contra la computadora.
+
+import java.util.Scanner;
+
+public class PiedraPapelTijera {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] opciones = {"Piedra", "Papel", "Tijera"};
+        int computadora = (int) (Math.random() * 3);
+        System.out.println("Elige: 0 para Piedra, 1 para Papel, 2 para Tijera");
+        int jugador = sc.nextInt();
+        
+        System.out.println("Computadora eligió: " + opciones[computadora]);
+        System.out.println("Tú elegiste: " + opciones[jugador]);
+        
+        if (jugador == computadora) {
+            System.out.println("¡Es un empate!");
+        } else if ((jugador == 0 && computadora == 2) || 
+                   (jugador == 1 && computadora == 0) || 
+                   (jugador == 2 && computadora == 1)) {
+            System.out.println("¡Ganaste!");
+        } else {
+            System.out.println("¡Perdiste!");
+        }
+    }
+}
